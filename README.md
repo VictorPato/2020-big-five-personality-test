@@ -1,9 +1,12 @@
 # 2020-big-five-personality-test
 
-In this project, we work with the Big Five Personality Quiz Answers to find cultural differences in the answers of different countries. We'd also like to explore which of the questions are more difficult to approach, measured in the time necessary to provide an answer.
+In this project, we work with the Big Five Personality Quiz Answers to find cultural differences in the answers from the entries of different countries.
 Using the Big Five Personality Test extracted from Kaggle: https://www.kaggle.com/tunguz/big-five-personality-test
+Here you can find more information about the categories, the questions, and scoring: https://openpsychometrics.org/printable/big-five-personality-test.pdf 
 
 # Overview
+
+The main goal of the project is to analyze the answers given to the BFPQ by the country of their responder. We are eager to find differences in the average of the scores that might provide insight on the personality of the citizens of certain countries or continents. There's also an interesting metric being recorded, which is the total time used to answer the test. This information could be used to find if certain countries are better at knowing themselves (or simply understanding the test and following instructions!).
 
 *State what is the main goal of the project. State what sorts of question(s) you want to answer or what sort of system you want to build. (Questions may be non-technical -- e.g., is there a global correlation between coffee consumption and research output -- so long as they require data analysis or other technical solutions.)*
 
