@@ -51,7 +51,13 @@ And there's some metadata associated with each entrie:
 > **lat_appx_lots_of_err**    approximate latitude of user. determined by technical information, THIS IS NOT VERY ACCURATE. Read the article "How an internet mapping glitch turned a random Kansas farm into a digital hell" https://splinternews.com/how-an-internet-mapping-glitch-turned-a-random-kansas-f-1793856052 to learn about the perils of relying on this information  
 > **long_appx_lots_of_err**   approximate longitude of user  
 
+As the proyect was developed, we discovered that the data had a ton of missing values and incorrect values (i.e. negative times) that threw out our results. In consequence, we had to a proper clean up before using the data.
+
 # Methods
+
+First of all, data has to be cleaned up. Rows with missing values had to be removed as well as rows with values outside normal ranges. As this clean up job is relatively straightforward, and had to be run just a single time, a simple Python script proved enough to convert this data into what we would use onwards. This script can be found in *cleancsv.py*
+
+This cleaned up data was loaded into the Hadoop Distributed File System (HDFS) running in the course's server. From this point onward we use Apache Pig to query the data. This technology proved powerful enough and flexible enough to run all of the queries we wanted to do. The whole script can be found in *proyecto.pig*
 
 *Detail the methods used during the project. Provide an overview of the techniques/technologies used, why you used them and how you used them. Refer to the source-code delivered with the project. Describe any problems you encountered.*
 
