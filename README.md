@@ -1,8 +1,8 @@
 # 2020-big-five-personality-test
 
-In this project, we work with the Big Five Personality Quiz Answers to find cultural differences in the answers from the entries of different countries.
-Using the Big Five Personality Test extracted from Kaggle: https://www.kaggle.com/tunguz/big-five-personality-test
-Here you can find more information about the categories, the questions, and scoring: https://openpsychometrics.org/printable/big-five-personality-test.pdf 
+In this project, we work with the Big Five Personality Quiz Answers to find cultural differences in the answers from the entries of different countries.  
+Using the Big Five Personality Test extracted from Kaggle: https://www.kaggle.com/tunguz/big-five-personality-test  
+Here you can find more information about the categories, the questions, and scoring: https://openpsychometrics.org/printable/big-five-personality-test.pdf   
 
 # Overview
 
