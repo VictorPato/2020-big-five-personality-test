@@ -13,8 +13,8 @@ with open('data-final.csv') as csvfile:
                 continue
             # revisar si tiene 0s (50 a 99)
             valid = True
-            for time in row[50:100]:
-                if int(time) <= 0:
+            for time in row[0:100]:
+                if int(time) <= 0 or int(time) > 60000:
                     valid = False
                     break
             if valid:
