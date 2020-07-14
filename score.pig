@@ -18,7 +18,7 @@ prom_person = FOREACH filtered GENERATE country, (20 + EXT1 - EXT2 + EXT3 - EXT4
 
 -- Group by country
 group_prom_country = GROUP prom_person BY country;
-/ 10.0 + 1
+
 -- Get average score for each category for each country
 prom_country = FOREACH group_prom_country GENERATE group as country, AVG(prom_person.EXT_PROM) AS EXT_PROM, AVG(prom_person.EST_PROM) AS EST_PROM, AVG(prom_person.AGR_PROM) AS AGR_PROM, AVG(prom_person.CSN_PROM) AS CSN_PROM, AVG(prom_person.OPN_PROM) AS OPN_PROM;
 
