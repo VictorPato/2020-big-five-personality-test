@@ -14,7 +14,7 @@ count_by_country = FOREACH group_country GENERATE group as country, SUM(filtered
 countries = FILTER count_by_country BY cnt > 1000l;
 
 -- Get average score for each category for each person
-prom_person = FOREACH filtered GENERATE country, (20 + EXT1 - EXT2 + EXT3 - EXT4 + EXT5 - EXT6 + EXT7 - EXT8 + EXT9 - EXT10) / 10.0 + 1.0 AS EXT_PROM, (38 - EST1 + EST2 - EST3 + EST4 - EST5 - EST6 - EST7 - EST8 - EST9 - EST10) / 10.0 + 1.0 AS EST_PROM, (14 - AGR1 + AGR2 - AGR3 + AGR4 - AGR5 + AGR6 - AGR7 + AGR8 + AGR9 + AGR10) / 10.0 + 1.0 AS AGR_PROM, (14 + CSN1 - CSN2 + CSN3 - CSN4 + CSN5 - CSN6 + CSN7 - CSN8 + CSN9 + CSN10) / 10.0 + 1.0 AS CSN_PROM, (8 + OPN1 - OPN2 + OPN3 - OPN4 + OPN5 - OPN6 + OPN7 + OPN8 + OPN9 + OPN10) / 10.0 AS OPN_PROM;
+prom_person = FOREACH filtered GENERATE country, (20 + EXT1 - EXT2 + EXT3 - EXT4 + EXT5 - EXT6 + EXT7 - EXT8 + EXT9 - EXT10) / 10.0 + 1.0 AS EXT_PROM, (38 - EST1 + EST2 - EST3 + EST4 - EST5 - EST6 - EST7 - EST8 - EST9 - EST10) / 10.0 + 1.0 AS EST_PROM, (14 - AGR1 + AGR2 - AGR3 + AGR4 - AGR5 + AGR6 - AGR7 + AGR8 + AGR9 + AGR10) / 10.0 + 1.0 AS AGR_PROM, (14 + CSN1 - CSN2 + CSN3 - CSN4 + CSN5 - CSN6 + CSN7 - CSN8 + CSN9 + CSN10) / 10.0 + 1.0 AS CSN_PROM, (8 + OPN1 - OPN2 + OPN3 - OPN4 + OPN5 - OPN6 + OPN7 + OPN8 + OPN9 + OPN10) / 10.0 + 1 AS OPN_PROM;
 
 -- Group by country
 group_prom_country = GROUP prom_person BY country;
