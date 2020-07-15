@@ -33,8 +33,8 @@ order_by_csn = ORDER joined BY prom_country::CSN_PROM ASC;
 order_by_opn = ORDER joined BY prom_country::OPN_PROM ASC;
 
 -- Store
-STORE order_by_ext INTO '/uhadoop2020/pbelmonte/results/score/order_by_ext/';
-STORE order_by_est INTO '/uhadoop2020/pbelmonte/results/score/order_by_est/';
-STORE order_by_agr INTO '/uhadoop2020/pbelmonte/results/score/order_by_agr/';
-STORE order_by_csn INTO '/uhadoop2020/pbelmonte/results/score/order_by_csn/';
-STORE order_by_opn INTO '/uhadoop2020/pbelmonte/results/score/order_by_opn/';
+STORE order_by_ext INTO '/uhadoop2020/pbelmonte/results3/score/order_by_ext/';
+STORE order_by_est INTO '/uhadoop2020/pbelmonte/results3/score/order_by_est/';
+STORE order_by_agr INTO '/uhadoop2020/pbelmonte/results3/score/order_by_agr/';
+STORE order_by_csn INTO '/uhadoop2020/pbelmonte/results3/score/order_by_csn/';
+STORE order_by_opn INTO '/uhadoop2020/pbelmonte/results3/score/order_by_opn/';
