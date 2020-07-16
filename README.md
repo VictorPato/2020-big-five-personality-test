@@ -75,7 +75,17 @@ Finally, the results were exported as *.csv* files, and loaded into Google Sheet
 
 # Results
 
-*Detail the results of the project. Different projects will have different types of results; e.g., run-times or result sizes, evaluation of the methods you're comparing, the interface of the system you've built, and/or some of the results of the data analysis you conducted.*
+First, we take the average of each category for each country. The average of the averages. In here we can see that some categories naturally score higher than others.
+![alt text](https://github.com/cc5212/2020-big-five-personality-test/blob/master/results/Average%20Scores%20by%20Category.png "Average Scores by Category")
+
+In each of the following graphics, we show were all countries are positioned against each other. First, as the average of all categories, then by each category. As we wanted to know how our country stacked against others, it is highlighted in red. For comparison, we also took the country with most answers, the USA, and highlighted it purple.
+
+![alt text](https://github.com/cc5212/2020-big-five-personality-test/blob/master/results/Average%20Total%20Score%20by%20Country.png "Average Total Score by Country")
+![alt text](https://github.com/cc5212/2020-big-five-personality-test/blob/master/results/Average%20Agreeableness%20Score%20by%20Country.png "Average Agreeableness Score by Country")
+![alt text](https://github.com/cc5212/2020-big-five-personality-test/blob/master/results/Average%20Conscientiousness%20Score%20by%20Country.png "Average Conscientiousness Score by Country")
+![alt text](https://github.com/cc5212/2020-big-five-personality-test/blob/master/results/Average%20Extroversion%20by%20Country.png "Average Extroversion by Country")
+![alt text](https://github.com/cc5212/2020-big-five-personality-test/blob/master/results/Average%20Neuroticism%20Score%20by%20Country.png "Average Neuroticism Score by Country")
+![alt text](https://github.com/cc5212/2020-big-five-personality-test/blob/master/results/Average%20Openness%20to%20Experience%20Score%20by%20Country.png "Average Openness to Experience Score by Country")
 
 # Conclusion
 
