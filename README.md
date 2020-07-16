@@ -74,7 +74,6 @@ From this point onward we use Apache Pig to query the data. This technology prov
 Finally, the results were exported as *.csv* files, and loaded into Google Sheets to create some charts.
 
 # Results
-
 First, we take the average of each category for each country. The average of the averages. In here we can see that some categories naturally score higher than others.
 ![alt text](https://github.com/cc5212/2020-big-five-personality-test/blob/master/results/Average%20Scores%20by%20Category.png "Average Scores by Category")
 
@@ -87,6 +86,10 @@ In each of the following graphics, we show were all countries are positioned aga
 ![alt text](https://github.com/cc5212/2020-big-five-personality-test/blob/master/results/Average%20Neuroticism%20Score%20by%20Country.png "Average Neuroticism Score by Country")
 ![alt text](https://github.com/cc5212/2020-big-five-personality-test/blob/master/results/Average%20Openness%20to%20Experience%20Score%20by%20Country.png "Average Openness to Experience Score by Country")
 
+Finally, we take the average time to answer each question by country
+![alt text](https://github.com/cc5212/2020-big-five-personality-test/blob/master/results/Average%20Time%20to%20Answer%20by%20Country.png
+ "Average Time to Answer by Country")
+ 
 # Conclusion
 
 *Summarise main lessons learnt. What was easy? What was difficult? What could have been done better or more efficiently?*
