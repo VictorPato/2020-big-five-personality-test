@@ -93,8 +93,8 @@ Finally, we take the average time to answer each question by country
 # Conclusion
 - English-speaking countries tend to have shorter response times. We think this makes sense, as people who understand English can quickly grasp the meaning of each question.  
 - The results shown may be highly biased due to the source of the data (an online quiz in English only). We think this may explain why Brazil was the country with the lower average extroversion, even though Brazilian people are generally known to be quite outgoing. As just 7% of their population speaks English, the people who answered the quiz might not be quite representative of their countries population. This might be true for many other country's as well.  
--Chile is relatively low in the different rankings, especially Conscientiousness.  
--Pig is a language that enables queries of the type explored in this experiment, but it was not comfortable to use and raised various unexpected problems. In the future we will probably choose a different technology if there is a choice.
+- Chile is relatively low in the different rankings, especially Conscientiousness.  
+- Pig is a language that enables queries of the type explored in this experiment, but it was not comfortable to use and raised various unexpected problems. In the future we will probably choose a different technology if there is a choice.
 
 
 
