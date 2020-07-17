@@ -6,9 +6,9 @@ You can find more information about the categories, the questions, and scoring i
 
 # Overview
 
-The main goal of the project is to analyze the answers given to the BFPQ by the country of their responder. We are eager to find differences in the average of the scores that might provide insight on the personality of the citizens of certain countries or continents. There's also an interesting metric being recorded, which is the total time used to answer the test. This information could be used to find if certain countries are better at knowing themselves (or simply understanding the test and following instructions!).  
+The main goal of the project is to analyze the answers given to the BFPQ by the country of their responder. We are eager to find differences in the average of the scores that might provide insight on the personality of the citizens of certain countries or continents. There is also an interesting metric being recorded, which is the total time used to answer the test. This information could be used to find if certain countries are better at knowing themselves (or simply understanding the test and following instructions!).  
   
-Additionaly, we'd like to caracterize Chile as a country, and observe how it stacks against other countries of the world.
+Additionally, we would d like to characterize Chile as a country, and observe how it stacks against other countries of the world.
 
 # Data
 
@@ -18,7 +18,7 @@ It consists of 1015341 entries. From the Codebook in the same page:
 > The personality test was constructed with the "Big-Five Factor Markers" from the IPIP. https://ipip.ori.org/newBigFive5broadKey.htm  
 > Participants were informed that their responses would be recorded and used for research at the beginning of the test, and asked to confirm their consent at the end of the test.  
 >  
-> The following items were presented on one page and each was rated on a five point scale using radio buttons. The order on page was was EXT1, AGR1, CSN1, EST1, OPN1, EXT2, etc.  
+> The following items were presented on one page and each was rated on a five point scale using radio buttons. The order on page was EXT1, AGR1, CSN1, EST1, OPN1, EXT2, etc.  
 > The scale was labeled 1=Disagree, 3=Neutral, 5=Agree  
 
 The categories are:  
@@ -51,7 +51,7 @@ And there's some metadata associated with each entry:
 > **screenh**     The height of the user's screen in pixels  
 > **introelapse** The time in seconds spent on the landing / intro page  
 > **testelapse**  The time in seconds spent on the page with the survey questions  
-> **endelapse**   The time in seconds spent on the finalization page (where the user was asked to indicate if they has answered accurately and their answers could be stored and used for research. Again: this dataset only includes users who answered "Yes" to this question, users were free to answer no and could still view their results either way)  
+> **endelapse**   The time in seconds spent on the finalization page (where the user was asked to indicate if they have answered accurately and their answers could be stored and used for research. Again: this dataset only includes users who answered "Yes" to this question, users were free to answer no and could still view their results either way)  
 > **IPC**         The number of records from the user's IP address in the dataset. For max cleanliness, only use records where this value is 1. High values can be because of shared networks (e.g. entire universities) or multiple submissions  
 > **country**     The country, determined by technical information (NOT ASKED AS A QUESTION)  
 > **lat_appx_lots_of_err**    approximate latitude of user. determined by technical information, THIS IS NOT VERY ACCURATE. Read the article "How an internet mapping glitch turned a random Kansas farm into a digital hell" https://splinternews.com/how-an-internet-mapping-glitch-turned-a-random-kansas-f-1793856052 to learn about the perils of relying on this information  
@@ -67,7 +67,7 @@ First of all, data has to be cleaned up. Rows with missing values had to be remo
 
 This cleaned up data was loaded into the Hadoop Distributed File System (HDFS) running in the course's server. Once loaded, and as recommended in the original data set, only entries that came from different IPs were used, in order to filter potential repeated entries. Finally, and arbitrarily, we only used countries with over 1000 entries, which we think could be a sample big enough to represent a country.  
 
-...we believe that even though we have 1000 entries or more for each country, this sample can be heavily biased. The test was 1. only taken in online format 2. voluntary and 3. only taken in English. This can generate a big bias, especially on countries that do not speak English as their first language (more on this later)...
+...we believe that even though we have 1000 entries or more for each country, this sample can be heavily biased. The test was 1. only taken in online format 2. voluntary and 3. only taken in English. These can generate a big bias, especially on countries that do not speak English as their first language (more on this later) ...
 
 From this point onward we use Apache Pig to query the data. This technology proved powerful and flexible enough to run all of the queries we wanted to do. This queries can be found in the *.pig* files.
 
@@ -91,8 +91,12 @@ Finally, we take the average time to answer each question by country
  "Average Time to Answer by Country")
  
 # Conclusion
+- English-speaking countries tend to have shorter response times. We think this makes sense, as people who understand English can quickly grasp the meaning of each question.  
+- The results shown may be highly biased due to the source of the data (an online quiz in English only). We think this may explain why Brazil was the country with the lower average extroversion, even though Brazilian people are generally known to be quite outgoing. As just 7% of their population speaks English, the people who answered the quiz might not be quite representative of their countries population. This might be true for many other country's as well.  
+-Chile is relatively low in the different rankings, especially Conscientiousness.  
+-Pig is a language that enables queries of the type explored in this experiment, but it was not comfortable to use and raised various unexpected problems. In the future we will probably choose a different technology if there is a choice.
 
-*Summarise main lessons learnt. What was easy? What was difficult? What could have been done better or more efficiently?*
+
 
 # Appendix
 
